@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analysis – BudgetWise GenZ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>BudgetWise</h2>
+    <button onclick="go('dashboard.html')">🏠 Dashboard</button>
+    <button class="active">📊 Analysis</button>
+    <button onclick="logout()">🚪 Logout</button>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <h2>Spending Analysis</h2>
+
+    <div class="analysis-card">
+      <h3>Spending Distribution</h3>
+      <div class="donut-placeholder">Donut Graph Here</div>
+    </div>
+
+    <div class="analysis-card">
+      <h3>Insights</h3>
+      <p>Your spending trends will appear here.</p>
+    </div>
+
+  </main>
+
+</div>
+
+<script src="router.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

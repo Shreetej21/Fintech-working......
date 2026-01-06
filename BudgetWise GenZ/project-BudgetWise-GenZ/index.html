@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BudgetWise GenZ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+  <div class="login-card">
+    <h1>BudgetWise GenZ</h1>
+    <p>Track. Learn. Grow.</p>
+
+    <input id="username" placeholder="Enter your name" />
+    <button onclick="login()">Enter</button>
+  </div>
+
+<script>
+  function login() {
+    const name = document.getElementById("username").value.trim();
+    if (!name) return alert("Enter your name");
+    sessionStorage.setItem("user", name);
+    window.location.href = "dashboard.html";
+  }
+</script>
+
+</body>
+</html>

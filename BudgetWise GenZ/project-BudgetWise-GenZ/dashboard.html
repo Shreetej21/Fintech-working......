@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard – BudgetWise GenZ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>BudgetWise</h2>
+    <button onclick="go('dashboard.html')">🏠 Dashboard</button>
+    <button onclick="go('analysis.html')">📊 Analysis</button>
+    <button onclick="logout()">🚪 Logout</button>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <header class="top">
+      <h2>Welcome, <span id="user"></span> 👋</h2>
+    </header>
+
+    <section class="kpis">
+      <div class="kpi">Today<br><b>₹480</b></div>
+      <div class="kpi">Yesterday<br><b>₹980</b></div>
+      <div class="kpi">7 Days<br><b>₹7,600</b></div>
+      <div class="kpi">Month<br><b>₹12,480</b></div>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <h3>Add Expense</h3>
+        <input id="amount" placeholder="Amount ₹">
+        <button onclick="addExpense()">Save</button>
+      </div>
+
+      <div class="card">
+        <h3>Summary</h3>
+        <ul id="summary"></ul>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="router.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
