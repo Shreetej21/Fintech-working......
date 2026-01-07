@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expenses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>BudgetWise</h2>
+    <button onclick="go('dashboard.html')">🏠 Dashboard</button>
+    <button onclick="go('analysis.html')">📊 Analysis</button>
+    <button class="active">💸 Expenses</button>
+    <button onclick="go('insights.html')">🧠 Insights</button>
+    <button onclick="go('learn.html')">📚 Learn</button>
+    <button onclick="go('achievements.html')">🏆 Achievements</button>
+    <button onclick="go('profile.html')">👤 Profile</button>
+    <button onclick="logout()">🚪 Logout</button>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HEADER -->
+    <div class="expenses-header">
+      <div>
+        <h1>Expenses</h1>
+        <p>Track and manage your spending</p>
+      </div>
+
+      <!-- ✅ FIXED BUTTON -->
+      <button class="add-expense-btn" id="addExpenseBtn">
+        ＋ Add Expense
+      </button>
+    </div>
+
+    <!-- STATS -->
+    <div class="expense-stats">
+      <div class="stat-card">
+        <p>Total This Month</p>
+        <h2 id="totalMonth">₹0</h2>
+      </div>
+      <div class="stat-card">
+        <p>Highest Category</p>
+        <h2 id="topCategory">—</h2>
+      </div>
+      <div class="stat-card">
+        <p>Transactions</p>
+        <h2 id="txnCount">0</h2>
+      </div>
+    </div>
+
+    <!-- SEARCH & FILTER -->
+    <div class="expense-controls">
+      <input id="searchInput" placeholder="Search expenses..." oninput="renderExpenses()">
+      <select id="filterCategory" onchange="renderExpenses()">
+        <option value="">All Categories</option>
+      </select>
+    </div>
+
+    <!-- LIST -->
+    <div class="expense-list" id="expenseList"></div>
+
+  </main>
+</div>
+
+<!-- ✅ MODAL -->
+<div class="modal-overlay" id="expenseModal">
+  <div class="modal">
+
+    <div class="modal-header">
+      <h3>Add New Expense</h3>
+      <button onclick="closeExpenseModal()">✕</button>
+    </div>
+
+    <p class="modal-sub">Quick Select Category</p>
+
+    <div class="category-grid">
+      <button class="category-btn" data-cat="Food">🍽 Food</button>
+      <button class="category-btn" data-cat="Travel">🚗 Travel</button>
+      <button class="category-btn" data-cat="Shopping">🛍 Shopping</button>
+      <button class="category-btn" data-cat="Clothes">👕 Clothes</button>
+      <button class="category-btn" data-cat="Entertainment">🎮 Entertainment</button>
+      <button class="category-btn" data-cat="Health">❤️ Health</button>
+      <button class="category-btn" data-cat="Utilities">⚡ Utilities</button>
+    </div>
+
+    <input id="customCategory" placeholder="Custom category (optional)">
+    <input id="description" placeholder="Description (optional)">
+    <input id="amount" type="number" placeholder="Amount ₹">
+
+    <button class="modal-save" onclick="saveModalExpense()">Add Expense</button>
+  </div>
+</div>
+
+<!-- ✅ SCRIPTS (ORDER MATTERS) -->
+<script src="router.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

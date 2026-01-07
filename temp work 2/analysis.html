@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Analysis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <h2>BudgetWise</h2>
+    <button onclick="go('dashboard.html')">🏠 Dashboard</button>
+    <button class="active">📊 Analysis</button>
+    <button onclick="go('expenses.html')">💸 Expenses</button>
+    <button onclick="go('insights.html')">🧠 Insights</button>
+    <button onclick="go('learn.html')">📚 Learn</button>
+    <button onclick="go('achievements.html')">🏆 Achievements</button>
+    <button onclick="go('profile.html')">👤 Profile</button>
+  </aside>
+
+  <main class="main">
+    <h2>Spending Analysis</h2>
+
+    <div class="analysis-card">
+      <h3>Daily Spending Trend</h3>
+      <p class="chart-help">Hover over points to see exact spending.</p>
+
+      <div id="lineChartWrapper">
+        <canvas id="lineChart" width="600" height="260"></canvas>
+
+        <!-- Tooltip -->
+        <div id="chartTooltip"></div>
+
+        <div id="lineChartEmpty" class="empty-state">
+          Add at least 2 expenses to see trends.
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+</div>
+
+<script src="router.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

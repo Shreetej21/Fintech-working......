@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>BudgetWise</h2>
+    <button class="active">🏠 Dashboard</button>
+    <button onclick="go('analysis.html')">📊 Analysis</button>
+    <button onclick="go('expenses.html')">💸 Expenses</button>
+    <button onclick="go('insights.html')">🧠 Insights</button>
+    <button onclick="go('learn.html')">📚 Learn</button>
+    <button onclick="go('achievements.html')">🏆 Achievements</button>
+    <button onclick="go('profile.html')">👤 Profile</button>
+    <button onclick="logout()">🚪 Logout</button>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HEADER -->
+    <div class="dashboard-header">
+      <div>
+         <h2>Welcome, <span id="user"></span> 👋</h2>
+
+        <p id="todayDate"></p>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-grid">
+      <div class="stat gradient-blue">
+        <p>Total Spent</p>
+        <h2 id="totalSpent">₹0</h2>
+        <span>This month</span>
+      </div>
+
+      <div class="stat gradient-green">
+        <p>Budget Left</p>
+        <h2 id="budgetLeft">₹0</h2>
+        <span>of ₹40,000</span>
+      </div>
+
+      <div class="stat gradient-purple">
+        <p>Savings</p>
+        <h2 id="savings">₹0</h2>
+        <span>Target ₹10,000</span>
+      </div>
+
+      <div class="stat gradient-gold">
+        <p>Investments</p>
+        <h2>₹45,000</h2>
+        <span>Growing well!</span>
+      </div>
+    </div>
+
+    <!-- CHART -->
+    <div class="chart-card">
+      <div class="chart-header">
+        <h3>Weekly Spending</h3>
+        <span>Last 7 days</span>
+      </div>
+
+      <div class="chart-wrapper">
+        <canvas id="weeklyChart" width="700" height="300"></canvas>
+        <div id="chartTooltip"></div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="router.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

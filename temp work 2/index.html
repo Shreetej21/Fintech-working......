@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BudgetWise – Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-container">
+
+  <!-- LEFT CONTENT -->
+  <div class="auth-left">
+    <div class="brand">
+      <div class="logo">✨</div>
+      <span>BudgetWise</span>
+    </div>
+
+    <h1>
+      Master Your Money,<br>
+      <span class="highlight">Level Up Your Life</span>
+    </h1>
+
+    <p class="subtitle">
+      Join the next generation of financially savvy individuals.
+      Track expenses, gain insights, and learn the secrets of wealth building — all in one place.
+    </p>
+
+    <div class="features">
+      <div class="feature">📈 Smart Expense Tracking</div>
+      <div class="feature">🧠 AI-Powered Insights</div>
+      <div class="feature">🎮 Gamified Learning</div>
+      <div class="feature">⚡ Financial Freedom</div>
+    </div>
+  </div>
+
+  <!-- RIGHT LOGIN CARD -->
+  <div class="auth-card">
+    <h2>Welcome Back</h2>
+    <p class="auth-sub">Continue your financial journey</p>
+
+    <label>Email</label>
+    <input id="email" type="email" placeholder="your@email.com">
+
+    <label>Password</label>
+    <div class="password-wrap">
+      <input id="password" type="password" placeholder="••••••••">
+      <span class="eye" onclick="togglePassword()">👁</span>
+    </div>
+
+    <div class="forgot">Forgot password?</div>
+
+    <button class="auth-btn" onclick="login()">Sign In</button>
+
+    <p class="signup">
+      Don’t have an account? <span>Sign up</span>
+    </p>
+
+    <p class="terms">
+      By continuing, you agree to our Terms of Service and Privacy Policy
+    </p>
+  </div>
+
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

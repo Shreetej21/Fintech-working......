@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h2>BudgetWise</h2>
+    <button onclick="go('dashboard.html')">🏠 Dashboard</button>
+    <button onclick="go('analysis.html')">📊 Analysis</button>
+    <button onclick="go('expenses.html')">💸 Expenses</button>
+    <button onclick="go('insights.html')">🧠 Insights</button>
+    <button onclick="go('learn.html')">📚 Learn</button>
+    <button onclick="go('achievements.html')">🏆 Achievements</button>
+    <button class="active">👤 Profile</button>
+  </aside>
+
+  <main class="main">
+    <h2>Profile</h2>
+    <p>Name: <b><span id="user"></span></b></p>
+  </main>
+</div>
+
+<script src="router.js"></script>
+</body>
+</html>
